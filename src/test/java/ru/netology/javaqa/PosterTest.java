@@ -98,100 +98,85 @@ public class PosterTest {
 
     @Test
     void findLastFiveParametersTest() {
-        poster.save(film1);
-        poster.save(film2);
-        poster.save(film3);
-        poster.save(film4);
-        poster.save(film5);
-        poster.save(film6);
-        poster.save(film7);
-        poster.save(film8);
-        poster.save(film9);
-        poster.save(film10);
-        poster.save(film11);
+        Poster poster1 = new Poster(5);
+        poster1.save(film1);
+        poster1.save(film2);
+        poster1.save(film3);
+        poster1.save(film4);
+        poster1.save(film5);
+        poster1.save(film6);
+        poster1.save(film7);
+        poster1.save(film8);
+        poster1.save(film9);
+        poster1.save(film10);
+        poster1.save(film11);
 
         String[] expected = {film11, film10, film9, film8, film7};
-        String[] actual = poster.findLast(5);
+        String[] actual = poster1.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     void findLastZeroParametersTest() {
-        poster.save(film1);
-        poster.save(film2);
-        poster.save(film3);
-        poster.save(film4);
-        poster.save(film5);
-        poster.save(film6);
-        poster.save(film7);
-        poster.save(film8);
-        poster.save(film9);
-        poster.save(film10);
-        poster.save(film11);
+        Poster poster1 = new Poster(0);
+        poster1.save(film1);
+        poster1.save(film2);
+        poster1.save(film3);
+        poster1.save(film4);
+        poster1.save(film5);
+        poster1.save(film6);
+        poster1.save(film7);
+        poster1.save(film8);
+        poster1.save(film9);
+        poster1.save(film10);
+        poster1.save(film11);
 
         String[] expected = {};
-        String[] actual = poster.findLast(0);
+        String[] actual = poster1.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     void findLastTwelveParametersTest() {
-        poster.save(film1);
-        poster.save(film2);
-        poster.save(film3);
-        poster.save(film4);
-        poster.save(film5);
-        poster.save(film6);
-        poster.save(film7);
-        poster.save(film8);
-        poster.save(film9);
-        poster.save(film10);
-        poster.save(film11);
+        Poster poster1 = new Poster(12);
+        poster1.save(film1);
+        poster1.save(film2);
+        poster1.save(film3);
+        poster1.save(film4);
+        poster1.save(film5);
+        poster1.save(film6);
+        poster1.save(film7);
+        poster1.save(film8);
+        poster1.save(film9);
+        poster1.save(film10);
+        poster1.save(film11);
 
         String[] expected = {film11, film10, film9, film8, film7, film6, film5, film4, film3, film2, film1};
-        String[] actual = poster.findLast(12);
+        String[] actual = poster1.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    void findLastFiveTest() {
-        poster.save(film1);
-        poster.save(film2);
-        poster.save(film3);
-        poster.save(film4);
-        poster.save(film5);
-        poster.save(film6);
-        poster.save(film7);
-        poster.save(film8);
-        poster.save(film9);
-        poster.save(film10);
-        poster.save(film11);
-
-        String[] expected = {film11, film10, film9, film8, film7};
-        String[] actual = poster.findLast(5);
-
-        Assertions.assertArrayEquals(expected, actual);
-    }
 
     @Test
     void findLastElevenParametersTest() {
-        poster.save(film1);
-        poster.save(film2);
-        poster.save(film3);
-        poster.save(film4);
-        poster.save(film5);
-        poster.save(film6);
-        poster.save(film7);
-        poster.save(film8);
-        poster.save(film9);
-        poster.save(film10);
-        poster.save(film11);
+        Poster poster1 = new Poster(11);
+        poster1.save(film1);
+        poster1.save(film2);
+        poster1.save(film3);
+        poster1.save(film4);
+        poster1.save(film5);
+        poster1.save(film6);
+        poster1.save(film7);
+        poster1.save(film8);
+        poster1.save(film9);
+        poster1.save(film10);
+        poster1.save(film11);
 
         String[] expected = {film11, film10, film9, film8, film7, film6, film5, film4, film3, film2, film1};
-        String[] actual = poster.findLast(11);
+        String[] actual = poster1.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
