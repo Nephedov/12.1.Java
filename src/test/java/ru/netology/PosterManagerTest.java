@@ -48,17 +48,6 @@ public class PosterManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    void getLast1MockTest() {
-        Film[] films = {film1, film2, film3};
-
-        doReturn(films).when(repo).findAll();
-
-        Film[] expected = {film3};
-        Film[] actual = manager.getLast();
-
-        Assertions.assertArrayEquals(expected, actual);
-    }
 
     @Test
     void getLastTest() {
