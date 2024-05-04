@@ -2,22 +2,38 @@
 
 ## Решения
 ### Задание 1
- * <a href="https://github.com/Nephedov/12.1.Java/blob/e2c469fab83e26992ddc052b70a553cedac64cfa/src/main/java/ru/netology/javaqa/Poster.java">Poster.java</a>.
- * <a href="https://github.com/Nephedov/12.1.Java/blob/e2c469fab83e26992ddc052b70a553cedac64cfa/src/test/java/ru/netology/javaqa/PosterTest.java">PosterTest.java</a>.
+ * <a href="https://github.com/Nephedov/12.1.Java/blob/main/src/main/java/ru/netology/javaqa/Poster.java">Poster.java</a> - класс-менеджер.
+ * <a href="https://github.com/Nephedov/12.1.Java/blob/main/src/test/java/ru/netology/javaqa/PosterTest.java">PosterTest.java</a> - автотесты.
+
+Ветка <a href="https://github.com/Nephedov/12.1.Java/tree/main">main</a> с проектом.
 ### Задание 2
- * <a href="https://github.com/Nephedov/12.1.Java/blob/ed12c306e1d981abbd628204c763029920f9a38f/src/main/java/ru/netology/repository/PosterRepository.java">PosterRepository.java</a>.
- * <a href="https://github.com/Nephedov/12.1.Java/blob/ed12c306e1d981abbd628204c763029920f9a38f/src/main/java/ru/netology/domain/Film.java">Film.java</a>.
- * <a href="https://github.com/Nephedov/12.1.Java/blob/ed12c306e1d981abbd628204c763029920f9a38f/src/main/java/ru/netology/PosterManager.java">PosterManager.java</a>.
- * <a href="https://github.com/Nephedov/12.1.Java/blob/ed12c306e1d981abbd628204c763029920f9a38f/src/test/java/ru/netology/PosterManagerTest.java">PosterManagerTest.java</a>.
- * <a href="https://github.com/Nephedov/12.1.Java/blob/ed12c306e1d981abbd628204c763029920f9a38f/src/test/java/ru/netology/repository/PosterRepositoryTest.java">PosterRepositoryTest.java</a>.
+ * <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/repository/PosterRepository.java">PosterRepository.java</a> - класс-репозиторий.
+ * <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/domain/Film.java">Film.java</a> - описывающий объект "фильм".
+ * <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/PosterManager.java">PosterManager.java</a> - класс-менеджер.
+ * <a href="https://github.com/Nephedov/12.1.Java/blob/ed12c306e1d981abbd628204c763029920f9a38f/src/test/java/ru/netology/PosterManagerTest.java">PosterManagerTest.java</a> - автотесты с Mockito.
+ * <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/test/java/ru/netology/repository/PosterRepositoryTest.java">PosterRepositoryTest.java</a> - автотесты.
+
+Ветка <a href="https://github.com/Nephedov/12.1.Java/tree/layers">layers</a> с проектом.
 ## Что было сделано
-  * Настроен Maven проект с JunitJupier, Lombok, Jacoco и Github Ci c verify-сборкой.
-  * Реализован класс Poster.java с методами взаимодействия со строчными массивами.
-  * Реализован класс с тестами PosterTest.java.
-  * Создана ветка layers из ветки main в которой:
-    * Добавлены классы Film.java,  PosterRepository.java.
-    * Добавлен класс PosterManager.java, объединяющий логику классов Film.java,  PosterRepository.java.
-    * Добавлены тестовые классы PosterRepositoryTest.java, PosterManagerTest.java с использованием Mockito и без.
+### Задание 1
+* Создан Maven проект с и настроен <a href="https://github.com/Nephedov/12.1.Java/blob/main/pom.xml">pom.xml</a> c зависимостями и плагинами:
+  * JunitJupier.
+  * Lombok.
+  * Jacoco.
+* Настроен <a href="https://github.com/Nephedov/12.1.Java/blob/main/.github/workflows/maven.yml">maven.yml</a> для Github Ci c verify-сборкой.
+* Реализован класс <a href="https://github.com/Nephedov/12.1.Java/blob/main/src/main/java/ru/netology/javaqa/Poster.java">Poster.java</a> с методами взаимодействия со строчными массивами.
+* Реализован класс с тестами <a href="https://github.com/Nephedov/12.1.Java/blob/main/src/test/java/ru/netology/javaqa/PosterTest.java">PosterTest.java</a>.
+### Задание 2
+* Создана ветка <a href="https://github.com/Nephedov/12.1.Java/tree/layers">layers</a> из ветки <a href="https://github.com/Nephedov/12.1.Java/tree/main">main</a> в которой:
+  * Реализован класс <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/domain/Film.java">Film.java</a> - описывающий объект "фильм".
+  * Реализован класс-репозиторий <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/repository/PosterRepository.java">PosterRepository.java</a>, имеющий методы сохранения, удаления, поиска экземпляров Film.
+  * Реализован класс <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/PosterManager.java">PosterManager.java</a>, объединяющий логику классов
+    <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/domain/Film.java">Film.java</a>,
+    <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/repository/PosterRepository.java">PosterRepository.java</a>.
+  * Реализован класс с автотестами <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/test/java/ru/netology/repository/PosterRepositoryTest.java">PosterRepositoryTest.java</a>,
+    проверяющий класс <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/repository/PosterRepository.java">PosterRepository.java</a>.
+  * Реализован класс с автотестами <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/test/java/ru/netology/PosterManagerTest.java">PosterManagerTest.java</a>,
+    проверяющий класс <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/PosterManager.java">PosterManager.java</a>, с применением Mockito.
 
 # Задание 1. Менеджер афиши (обязательное к выполнению)
 
@@ -25,32 +41,12 @@
 
 ![image](https://user-images.githubusercontent.com/53707586/152697921-e71d853c-aa2e-482b-be61-39e6c2cfb0b1.png)
 
-В этой задаче не нужно разделять менеджер и репозиторий — все фильмы должны храниться внутри массива в поле самого менеджера. Изначально, сразу после создания, менеджер не должен содержать фильмов. 
-
 Менеджер должен уметь выполнять следующие операции:
 1. Добавление нового фильма.
 2. Вывод всех фильмов в порядке добавления (`findAll`).
 3. Вывод максимального лимита* последних добавленных фильмов в обратном от добавления порядке (`findLast`).
 
 *Сделайте так, чтобы по умолчанию выводилось последние 10 добавленных фильмов, но при создании менеджера можно было указать другое число, чтобы, например, выдавать 5, а не 10. То есть у менеджера должно быть два конструктора: один без параметров, выставляющий лимит менеджера в 10, а другой с параметром, берущий значение лимита для менеджера из параметра конструктора.
-
-Метод получения последних фильмов будет очень похож на тот, что был в лекции. Основное отличие в том, что вам в его начале надо будет вычислить правильный ожидаемый размер результирующего массива-ответа, а не просто брать длину массива, что лежит в поле. Сделать это можно, заведя целочисленную переменную, в которую вы сохраните желаемый размер создаваемого массива, вычислите с помощью условных операторов для неё значение, а затем только создадите массив, указав эту переменную как требуемый для него размер, например:
-
-```java
-...
-  ??? resultLength;
-  if ??? {
-    resultLength = ???
-  } else {
-    resultLength = ???
-  }
-  ??? result = new ???[resultLength];
-  for (???) {
-    // заполняем result из массива, что лежит в поле
-    // в обратном порядке
-  }
-...
-```
 
 # Задание 2*. Менеджер афиши: divide and conquer (необязательная задача)
 
@@ -62,6 +58,6 @@
 1. `removeById` — удаляет объект по идентификатору, если объекта нет, то пусть будет исключение, как на лекции.
 1. `removeAll`* — полностью вычищает репозиторий, для удаления всех элементов достаточно в поле `items` положить пустой массив.
 
-Обеспечьте использование менеджером созданного вами репозитория. Новых функций в менеджер по сравнению с первым заданием добавлять не нужно. Репозиторий должен быть зависимостью для менеджера, то есть задаваться через конструктор и храниться в приватном поле.
+Обеспечьте использование менеджером созданного вами репозитория. Репозиторий должен быть зависимостью для менеджера, то есть задаваться через конструктор и храниться в приватном поле.
 
 Напишите 1–2 автотеста, используя Mockito для организации моков репозитория.
