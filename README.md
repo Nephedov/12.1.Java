@@ -35,6 +35,10 @@
   * Реализован класс с автотестами <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/test/java/ru/netology/PosterManagerTest.java">PosterManagerTest.java</a>,
     проверяющий класс <a href="https://github.com/Nephedov/12.1.Java/blob/layers/src/main/java/ru/netology/PosterManager.java">PosterManager.java</a>, с применением Mockito.
 
+---
+---
+
+
 # Описание Задания 1. Менеджер афиши (обязательное к выполнению)
 
 Вам необходимо реализовать менеджер афиши для фильмов. В качестве объекта фильма можно взять объект строки — название фильма — или создать свой дата-класс.
